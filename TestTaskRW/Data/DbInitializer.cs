@@ -15,7 +15,7 @@ namespace TestTaskRW.Data
         {
             var user1 = new User()
             {
-                Id = "only1superman",
+                //Id = "only1superman",
                 SurName = "Иванов",
                 FirstName = "Иван",
                 LastName = "Иванович",
@@ -30,7 +30,7 @@ namespace TestTaskRW.Data
             };
             var user2 = new User()
             {
-                Id = "first-finance-man",
+                //Id = "first-finance-man",
                 SurName = "Запечкина",
                 FirstName = "Зинаида",
                 LastName = "Зиждивна",
@@ -45,7 +45,7 @@ namespace TestTaskRW.Data
             };
             var user3 = new User()
             {
-                Id = "first-intarmed-man",
+                //Id = "first-intarmed-man",
                 SurName = "Героический",
                 FirstName = "Георгий",
                 LastName = "ГейОргиевич",
@@ -60,7 +60,7 @@ namespace TestTaskRW.Data
             };
             var user4 = new User()
             {
-                Id = "first-contract-man",
+                //Id = "first-contract-man",
                 SurName = "Крестов",
                 FirstName = "Константин",
                 LastName = "Вольфович",
@@ -103,24 +103,24 @@ namespace TestTaskRW.Data
         public void SeedRoles(ModelBuilder builder)
         {
             builder.Entity<IdentityRole>().HasData(
-                new IdentityRole() { Id = "only1superrole", Name = "Admin", NormalizedName = "Администратор" },
-                new IdentityRole() { Id = "finance-man-role", Name = "Accountant", NormalizedName = "Бухгалтерия" },
-                new IdentityRole() { Id = "serios-boss-mad", Name = "Depart-Lead", NormalizedName = "Начальник отделения" },
-                new IdentityRole() { Id = "diff-user-in-this-heaven", Name = "User", NormalizedName = "Смерд обыкновенный" }
+                new IdentityRole() { /*Id = "only1superrole",*/ Name = "Admin", NormalizedName = "Администратор" },
+                new IdentityRole() { /*Id = "finance-man-role",*/ Name = "Accountant", NormalizedName = "Бухгалтерия" },
+                new IdentityRole() { /*Id = "serios-boss-mad",*/ Name = "Depart-Lead", NormalizedName = "Начальник отделения" },
+                new IdentityRole() { /*Id = "diff-user-in-this-heaven",*/ Name = "User", NormalizedName = "Смерд обыкновенный" }
                 );
         }
 
         public void SeedUserRoles(ModelBuilder builder)
         {
-            builder.Entity<IdentityUserRole<string>>().HasData(
-                new IdentityUserRole<string>() { RoleId = "only1superrole", UserId = "only1superman" },
-                new IdentityUserRole<string>() { RoleId = "finance-man-role", UserId = "only1superman" },
-                new IdentityUserRole<string>() { RoleId = "serios-boss-man", UserId = "only1superman" },
-                new IdentityUserRole<string>() { RoleId = "diff-user-in-this-heaven", UserId = "only1superman" },
-                new IdentityUserRole<string>() { RoleId = "finance-man-role", UserId = "first-finance-man" },
-                new IdentityUserRole<string>() { RoleId = "serios-boss-mad", UserId = "first-intarmed-man" },
-                new IdentityUserRole<string>() { RoleId = "diff-user-in-this-heaven", UserId = "first-contract-man" }
-                );
+            //builder.Entity<IdentityUserRole<string>>().HasData(
+            //    new IdentityUserRole<string>() { RoleId = "only1superrole", UserId = "only1superman" },
+            //    new IdentityUserRole<string>() { RoleId = "finance-man-role", UserId = "only1superman" },
+            //    new IdentityUserRole<string>() { RoleId = "serios-boss-man", UserId = "only1superman" },
+            //    new IdentityUserRole<string>() { RoleId = "diff-user-in-this-heaven", UserId = "only1superman" },
+            //    new IdentityUserRole<string>() { RoleId = "finance-man-role", UserId = "first-finance-man" },
+            //    new IdentityUserRole<string>() { RoleId = "serios-boss-mad", UserId = "first-intarmed-man" },
+            //    new IdentityUserRole<string>() { RoleId = "diff-user-in-this-heaven", UserId = "first-contract-man" }
+            //    );
         }
     }
 }

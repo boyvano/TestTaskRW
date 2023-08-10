@@ -5,8 +5,8 @@ namespace TestTaskRW.Models.ViewModels
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Логин")]
-        public string Email { get; set; }
+        [Display(Name = "логин (никнейм)")]
+        public string Login { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -16,6 +16,6 @@ namespace TestTaskRW.Models.ViewModels
         [Display(Name = "Запомнить?")]
         public bool RememberMe { get; set; }
 
-        public string ReturnUrl { get; set; }
+        public string? ReturnUrl { get; set; }
     }
 }

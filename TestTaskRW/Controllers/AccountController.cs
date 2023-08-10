@@ -66,7 +66,7 @@ namespace TestTaskRW.Controllers
             {
                 //путём проб и ошибок выяснено, что проверка происходит по NormalizedUserName, а это равняется UserName.ToUpper()
                 var result =
-                    await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+                    await _signInManager.PasswordSignInAsync(model.Login, model.Password, model.RememberMe, false);
                 if (result.Succeeded)
                 {
                     // проверяем, принадлежит ли URL приложению
