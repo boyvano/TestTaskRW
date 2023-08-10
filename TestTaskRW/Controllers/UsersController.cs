@@ -20,6 +20,7 @@ namespace TestTaskRW.Controllers
 
         public IActionResult Index() => View(_userManager.Users.ToList());
 
+        [HttpPost]
         public IActionResult Create() => View();
 
         /*[HttpPost]
