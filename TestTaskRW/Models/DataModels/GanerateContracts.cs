@@ -11,7 +11,7 @@ namespace TestTaskRW.Models.DataModels
 {
     public class GanerateContracts
     {
-        readonly string pathToExcelFile = new System.IO.DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName + @"\Docs\курсовая для работы\Книга регистрации клиентов.xlsx";
+        readonly string pathToExcelFile = new System.IO.DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName + @"\Docs\Книга с данными.xlsx";
         private string pathToDocFile;
 
         public string GenDocxContract(Contract contract)
