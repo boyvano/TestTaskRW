@@ -21,15 +21,15 @@ namespace TestTaskRW.Models.DataModels
             else
                 pathToDocFile = string.Concat(System.IO.Path.GetTempPath(), @contract.CompanyName, ".docx");
 
-            //            using WordprocessingDocument doc =
-            //WordprocessingDocument.Create(pathToDocFile,
-            //                           WordprocessingDocumentType.Document,
-            //                           true);
-            //            MainDocumentPart mainPart = doc.AddMainDocumentPart();
-            //            mainPart.Document = new Document();
-            //            Body body = mainPart.Document.AppendChild(new Body());
-            //            SectionProperties props = new SectionProperties();
-            //            body.AppendChild(props);
+            using WordprocessingDocument doc =
+WordprocessingDocument.Create(pathToDocFile,
+                           WordprocessingDocumentType.Document,
+                           true);
+            MainDocumentPart mainPart = doc.AddMainDocumentPart();
+            mainPart.Document = new Document();
+            Body body = mainPart.Document.AppendChild(new Body());
+            SectionProperties props = new SectionProperties();
+            body.AppendChild(props);
             new GeneratedCode.GeneratedClass().CreatePackage(pathToDocFile, contract);
             return pathToDocFile;
         }
@@ -98,7 +98,7 @@ namespace TestTaskRW.Models.DataModels
             return contract;
         }
         public Contract ReadExcelRow(int RowNumber)
-        {            
+        {
             Contract contract = new Contract();
             using SpreadsheetDocument doc = SpreadsheetDocument.Open(pathToExcelFile, false);
             WorkbookPart wbPart = doc.WorkbookPart;
